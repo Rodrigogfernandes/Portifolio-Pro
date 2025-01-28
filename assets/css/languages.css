@@ -1,0 +1,28 @@
+.contentLang ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 16px;
+    margin: 1rem;
+    padding: 5px;
+    list-style: none;
+}
+
+.contentLang li {
+    padding: 10px;
+    margin: auto;
+}
+
+.acordeon .contentLang {
+    display: none;  
+    padding: 0.5rem;
+}
+
+.acordeon.open .contentLang {
+    display: inline-block;     
+}
+
+
+
+

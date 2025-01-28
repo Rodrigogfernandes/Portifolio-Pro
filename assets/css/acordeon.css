@@ -1,0 +1,106 @@
+.content1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+      
+.content {
+   margin-bottom: 20px; 
+}
+
+.icones {
+    display: grid;
+    width: 100%;
+    height: 100%;   
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.icones img {
+    transition: transform 0.3s ease;
+}
+
+.icones img:hover {
+    transform: scale(1.1);
+}
+
+.content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 2rem;
+}
+
+.content h4 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+    width: auto;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.acordeon.open,
+.acordeon:hover {
+    background: rgba(124, 134, 216, 0.15);
+    transform: translateY(-2px);
+}
+
+.acordeon .trigger {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1.2rem 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.acordeon .content {
+    opacity: 0;
+    height: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.acordeon.open .content {
+    opacity: 1;
+    height: auto;
+    padding: 1.5rem;
+}
+
+.acordeon .trigger::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 1.7rem;
+    right: 20px;
+    transform: translateY(-50%);
+    background-image: url('/assets/img/icons/seta.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s ease;
+}
+
+.acordeon.open .trigger::after {
+    transform: translateY(-50%) rotate(180deg);
+}

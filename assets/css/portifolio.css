@@ -1,0 +1,43 @@
+.port1 {   
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.port1::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #7c86d8;
+    transition: width 0.3s ease;
+}
+
+.port1:hover::after {
+    width: 100%;
+}
+
+.port2 {
+    padding: 1rem;
+    margin: 1rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.port2:hover {
+    transform: translateX(10px);
+}
+
+.sobre {
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}

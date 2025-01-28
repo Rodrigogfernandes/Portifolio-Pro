@@ -1,0 +1,99 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    margin: 0 auto 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.header .photo {
+    margin: 0 auto;
+}
+
+.photo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 2rem;
+    border: 3px solid rgba(124, 134, 216, 0.5);
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.title {
+    font-family: 'Neue Machina', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    background: linear-gradient(45deg, #fff, #7c86d8);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.information {
+    margin-top: -10px;
+    margin-left: 1rem;
+}
+
+.information .phone1,
+.information .mail1 {
+    font-family: 'Neue Machina', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.phone1:hover,
+.mail1:hover { 
+    color: #7c86d8;
+    text-decoration: underline;
+    transform: translateX(5px);
+}
+
+.information p {
+    font-family: 'Neue Machina', sans-serif;
+    display: flex;
+    align-items: center;
+    margin: 0.8rem 0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.information p::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 0.5rem;
+}
+
+.information .profile::before {
+    background-image: url('/assets/img/icons/profile.svg');
+}
+
+.information .phone::before {
+    background-image: url('/assets/img/icons/phone.svg');
+}
+
+.information .location::before {
+    background-image: url('/assets/img/icons/location.svg');
+}
+
+.information .email::before {
+    background-image: url('/assets/img/icons/email.svg');
+}
+
+
+
+
+
